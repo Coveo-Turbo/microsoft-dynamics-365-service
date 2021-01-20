@@ -1,0 +1,29 @@
+{
+    "name": "@coveops/microsoft-dynamics-365-service",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "coveops build microsoft-dynamics-365-service --template typescript",
+        "postbuild": "del /q .\\dist\\* && mkdir .\\dist\\resource && copy .\\resources\\ .\\dist\\resource\\",
+        "watch": "coveops build microsoft-dynamics-365-service --template typescript --watch",
+        "serve": "coveops serve",
+        "precompile": "npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "Apache-2.0",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "@coveops/localization-manager": "^1.0.0",
+        "@coveops/turbo-core": "^1.1.1",
+        "coveo-search-ui": "^2.10081.5"
+    },
+    "devDependencies": {
+        "@coveops/cli": "^0.13.2"
+    }
+}
